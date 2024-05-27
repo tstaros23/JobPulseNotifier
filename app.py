@@ -10,11 +10,11 @@ def home():
     return render_template("index.html")
 @app.route("/scrape")
 def scrape():
-    jobs = scrape_news()
+    jobs = scrape_jobs()
     return {"jobs" : jobs }
 
-def scrape_news():
-    print ("scrape news is called")
+def scrape_jobs():
+    print ("scrape jobs is called")
     url = "https://www.usta.com/en/home/about-usta/jobs---human-resources/middlestates/employment-opportunities.html"
     response = requests.get(url)
     soup = BeautifulSoup(response.content, "html.parser")
