@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 import requests
+import jsonify
 from bs4 import BeautifulSoup
 
 app = Flask(__name__)
@@ -11,17 +12,19 @@ def home():
 @app.route("/scrape")
 def scrape():
     jobs = scrape_jobs()
-    return {"jobs" : jobs }
+    return jsonify({"jobs" : jobs})
 
 def scrape_jobs():
-    print ("scrape jobs is called")
     url = "https://www.usta.com/en/home/about-usta/jobs---human-resources/middlestates/employment-opportunities.html"
     response = requests.get(url)
-    soup = BeautifulSoup(response.content, "html.parser")
-
+    soup = BeautifulSoup(response.content, "html5lib")
+    
+    container = soup.find('div', attrs = {'id': 'text-353cc9e8aa'} )
+    job_listings = container.find_all('h5')
+    
     jobs = []
-    for job in soup.find_all("h3", class_="headline"):
-        jobs.append(job.text)
+    for job in job_listings:
+        jobs.append(job)
     return jobs
 
 if __name__ == "__main__":
