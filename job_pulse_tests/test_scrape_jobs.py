@@ -1,8 +1,7 @@
 import unittest
-import app.py
+from job_pulse.app import scrape_jobs
 from unittest.mock import patch
 from bs4 import BeautifulSoup
-from app.py import scrape_jobs  # Replace with the actual name of your Flask app file
 
 class TestScrapeJobs(unittest.TestCase):
 
