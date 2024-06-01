@@ -1,11 +1,12 @@
 import unittest
+import sys
+import os
 from job_pulse.app import scrape_jobs
 from unittest.mock import patch
-from bs4 import BeautifulSoup
 
 class TestScrapeJobs(unittest.TestCase):
 
-    @patch('your_flask_app_file.requests.get')  # Mock 'requests.get' in the correct module
+    @patch('job_pulse.app.requests.get')  # Mock 'requests.get' in the correct module
     def test_scrape_jobs_with_sample_data(self, mock_get):
         # Sample HTML data
         sample_html = """
