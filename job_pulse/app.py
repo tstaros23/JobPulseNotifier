@@ -23,7 +23,7 @@ def scrape_jobs():
     
     jobs = []
     for job in job_listings:
-        jobs.append(job)
+        jobs.append(job.get_text(Strip=True))
     return jobs
 
 if __name__ == "__main__":

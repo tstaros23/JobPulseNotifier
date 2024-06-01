@@ -3,6 +3,7 @@ import sys
 import os
 from job_pulse.app import scrape_jobs
 from unittest.mock import patch
+from bs4 import BeautifulSoup
 
 class TestScrapeJobs(unittest.TestCase):
 
@@ -29,4 +30,5 @@ class TestScrapeJobs(unittest.TestCase):
         self.assertEqual(jobs, expected_jobs)
 
 if __name__ == '__main__':
-    unittest.main()
+        print("Python interpreter:", sys.executable)  # Print the Python interpreter being used
+        unittest.main()
