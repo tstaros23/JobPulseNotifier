@@ -16,7 +16,7 @@ def scrape():
 def scrape_jobs():
     url = "https://www.usta.com/en/home/about-usta/jobs---human-resources/middlestates/employment-opportunities.html"
     response = requests.get(url)
-    soup = BeautifulSoup(response.content)
+    soup = BeautifulSoup(response.content, "lxml")
     
     container = soup.find('div', attrs = {'id': 'text-353cc9e8aa'} )
     job_listings = container.find_all('h5')

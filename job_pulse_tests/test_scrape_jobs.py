@@ -1,9 +1,6 @@
 import unittest
-import sys
-import os
 from job_pulse.app import scrape_jobs
 from unittest.mock import patch
-from bs4 import BeautifulSoup
 
 class TestScrapeJobs(unittest.TestCase):
 
