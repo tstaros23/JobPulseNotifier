@@ -16,14 +16,14 @@ def scrape():
 def scrape_jobs():
     url = "https://www.usta.com/en/home/about-usta/jobs---human-resources/middlestates/employment-opportunities.html"
     response = requests.get(url)
-    soup = BeautifulSoup(response.content, "html5lib")
+    soup = BeautifulSoup(response.content)
     
     container = soup.find('div', attrs = {'id': 'text-353cc9e8aa'} )
     job_listings = container.find_all('h5')
     
     jobs = []
     for job in job_listings:
-        jobs.append(job.get_text(Strip=True))
+        jobs.append(job.get_text(strip=True))
     return jobs
 
 if __name__ == "__main__":
