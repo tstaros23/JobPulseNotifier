@@ -15,15 +15,17 @@ Job Pulse Notifier is a job alert app. Users provide the app with the names of t
 ##
 Setup
 * Clone or Fork this repository
-* From the command line, create and activateyour virtual environment:
-    
-    * Run the command to activate your virtual environment. For example:
-    * `source /path/to/your/venv/bin/activate`
+    * `git clone <repository-url>`
+    * `cd job_pulse_notifier`
+* Create and activateyour virtual environment:
+    * `python3 -m venv .venv`
+    * `source .venv/bin/activate`
     * Alternatively, if you're using Windows, it would be:
     * `.\path\to\your\venv\Scripts\activate`
-    * Install all of the virtual environment requirements:
+* Install all required packages:
     * `pip install -r requirements.txt`
-* To run the project from the command line:
-    * `python3 app.py`
+## To run the project
+* To run the application:
+    * `python3 job_pulse/app.py`
 * To Run the test suite:
     * `pytest`
