@@ -12,8 +12,7 @@ Job Pulse Notifier is a job alert app. Users provide the app with the names of t
 ## Prerequisites
 - Python 3.12.3
 - pip (Python package installer)
-##
-Setup
+## Setup
 * Clone or Fork this repository
     * `git clone <repository-url>`
     * `cd job_pulse_notifier`
