@@ -1,0 +1,19 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Virtual Environments
+.venv/
+
+# Unit test / coverage reports
+coverage.xml
+.pytest_cache/
+.pytest_cache/
+
+# Pycharm
+.idea/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
