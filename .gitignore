@@ -1,12 +1,13 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+*.py[cod]
 
 # Virtual Environments
+venv/
 .venv/
 
 # Unit test / coverage reports
 coverage.xml
-.pytest_cache/
 .pytest_cache/
 
 # Pycharm
