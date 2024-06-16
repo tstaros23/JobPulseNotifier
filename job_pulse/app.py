@@ -1,6 +1,7 @@
 from flask import Flask, render_template, jsonify
 import requests
 from bs4 import BeautifulSoup
+from job_pulse.robots import check_robots_txt  # Import the function from the job_pulse module
 
 app = Flask(__name__)
 
@@ -15,6 +16,8 @@ def scrape():
 
 def scrape_jobs():
     url = "https://www.usta.com/en/home/about-usta/jobs---human-resources/middlestates/employment-opportunities.html"
+    if not check_robots_txt(url):
+        return []
     response = requests.get(url)
     soup = BeautifulSoup(response.content, "lxml")
     

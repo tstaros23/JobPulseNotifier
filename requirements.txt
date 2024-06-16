@@ -11,6 +11,7 @@ Jinja2==3.1.4
 jsonify==0.5
 MarkupSafe==2.1.5
 requests==2.32.2
+requests-mock==1.12.1
 six==1.16.0
 soupsieve==2.5
 urllib3==2.2.1
