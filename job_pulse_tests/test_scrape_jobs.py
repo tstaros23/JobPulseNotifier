@@ -27,5 +27,4 @@ class TestScrapeJobs(unittest.TestCase):
         self.assertEqual(jobs, expected_jobs)
 
 if __name__ == '__main__':
-        print("Python interpreter:", sys.executable)  # Print the Python interpreter being used
         unittest.main()
